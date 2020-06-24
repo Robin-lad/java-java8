@@ -21,8 +21,8 @@ public class Function_01_Test {
 	// TODO l'age sera de la forme "<ENTIER>"
 	// TODO le mot de passe sera de la forme "pass_<ENTIER>"
 
-	private Function<Integer, Person> intToPerson = i -> new Person("first_" + i.toString(), "last_" + i.toString(), i,
-			"pass_" + i.toString());
+	private Function<Integer, Person> intToPerson = i -> new Person("first_" + i, "last_" + i, i,
+			"pass_" + i);
 
 	// end::intToPerson[]
 
