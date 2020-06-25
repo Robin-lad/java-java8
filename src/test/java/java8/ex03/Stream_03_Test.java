@@ -67,7 +67,7 @@ public class Stream_03_Test {
 		List<Customer> customers = new Data().getCustomers();
 
 		// TODO Construire la map Sexe -> Chaîne représentant les prénoms des clients
-		Map<Gender, String> result = customers.stream()
+		Map<Gender, String> result = customers.stream().sorted(Comparator.comparing(Customer::getFirstname))
 				.collect(Collectors.toMap(Customer::getGender, s -> s.getFirstname(), (s, t) -> s + "|" + t));
 
 		assertThat(result.get(Gender.F), is("Alexandra|Marion|Sophie"));
